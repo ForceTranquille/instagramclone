@@ -2,4 +2,22 @@
     <string name="app_name">HighGrams</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_add_post">Add Post</string>
+    <string name="title_notification">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="message">Message</string>
+    <string name="highgrams">HighGrams</string>
+    <string name="notifications">Notifications</string>
+    <string name="username">UserName</string>
+    <string name="_0">0</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="bio">bio</string>
+    <string name="images_save_button">images save button</string>
+    <string name="search">Search</string>
 </resources>

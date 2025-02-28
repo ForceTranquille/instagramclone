@@ -1,78 +1,79 @@
 package com.audy.highgrams
 
-import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.audy.highgrams.Fragments.HomeFragment
 import com.audy.highgrams.Fragments.NotificationsFragment
 import com.audy.highgrams.Fragments.ProfileFragment
 import com.audy.highgrams.Fragments.SearchFragment
 import com.audy.highgrams.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+
+    // Listener for bottom navigation item selections
+    private val onNavigationItemSelectedListener = NavigationBarView.OnItemSelectedListener { item ->
         when (item.itemId) {
             R.id.nav_home -> {
                 moveToFragment(HomeFragment())
-                return@OnNavigationItemSelectedListener true
+                return@OnItemSelectedListener true
             }
             R.id.nav_search -> {
                 moveToFragment(SearchFragment())
-                return@OnNavigationItemSelectedListener true
+                return@OnItemSelectedListener true
             }
             R.id.nav_add_post -> {
+                // Handle the add post action here, for example, open a dialog or a new activity
                 item.isChecked = false
-                startActivity(Intent(this@MainActivity, AddPostActivity::class.java))
-                return@OnNavigationItemSelectedListener true
+                return@OnItemSelectedListener true
             }
             R.id.nav_notifications -> {
                 moveToFragment(NotificationsFragment())
-                return@OnNavigationItemSelectedListener true
+                return@OnItemSelectedListener true
             }
             R.id.nav_profile -> {
                 moveToFragment(ProfileFragment())
-                return@OnNavigationItemSelectedListener true
+                return@OnItemSelectedListener true
             }
         }
-
         false
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Inflate layout using view binding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Get reference to the BottomNavigationView
         val navView: BottomNavigationView = binding.navView
 
-        val navController = findNavController(R.id.main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_search, R.id.nav_notifications,  R.id.nav_profile, R.id.nav_search,
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        // Set the navigation item selected listener
+        navView.setOnItemSelectedListener(onNavigationItemSelectedListener)
 
-
-        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-        moveToFragment(HomeFragment())
+        // Initially, load the HomeFragment
+        if (savedInstanceState == null) {
+            moveToFragment(HomeFragment())
+        }
     }
 
-    private fun moveToFragment(fragment: Fragment)
-    {
+    // Method to move to the specified fragment
+    private fun moveToFragment(fragment: Fragment) {
+        // Start fragment transaction
         val fragmentTrans = supportFragmentManager.beginTransaction()
+
+        // Replace the current fragment with the selected one
         fragmentTrans.replace(R.id.fragment_container, fragment)
+
+        // Add the transaction to the back stack so the user can navigate back
+        fragmentTrans.addToBackStack(null)
+
+        // Commit the transaction
         fragmentTrans.commit()
     }
 }
