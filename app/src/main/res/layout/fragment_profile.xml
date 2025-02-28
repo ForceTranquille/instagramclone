@@ -29,22 +29,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/profile_fragment_username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/username"
-                    android:textSize="18sp"
-                    android:maxLines="1"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:layout_centerVertical="true"
-                    />
 
-                <ImageView
+            <ImageView
                     android:id="@+id/options_view"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:contentDescription="@string/options_view"
                     android:src="@drawable/options"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
@@ -247,6 +237,7 @@
                     android:id="@+id/images_grid_view_btn"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/images_grid_view_btn"
                     android:src="@drawable/grid"
                     android:layout_weight="1"
                     style="?android:attr/buttonBarButtonStyle"

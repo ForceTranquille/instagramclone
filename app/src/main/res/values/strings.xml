@@ -20,4 +20,6 @@
     <string name="bio">bio</string>
     <string name="images_save_button">images save button</string>
     <string name="search">Search</string>
+    <string name="options_view">options view</string>
+    <string name="images_grid_view_btn">images_grid_view_btn</string>
 </resources>
