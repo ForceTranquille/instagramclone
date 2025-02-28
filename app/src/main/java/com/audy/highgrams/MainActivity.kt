@@ -4,10 +4,10 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.audy.highgrams.Fragments.HomeFragment
-import com.audy.highgrams.Fragments.NotificationsFragment
-import com.audy.highgrams.Fragments.ProfileFragment
-import com.audy.highgrams.Fragments.SearchFragment
+import com.audy.highgrams.fragments.HomeFragment
+import com.audy.highgrams.fragments.NotificationsFragment
+import com.audy.highgrams.fragments.ProfileFragment
+import com.audy.highgrams.fragments.SearchFragment
 import com.audy.highgrams.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationBarView
 
