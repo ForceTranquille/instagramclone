@@ -10,16 +10,17 @@
     <string name="message">Message</string>
     <string name="highgrams">HighGrams</string>
     <string name="notifications">Notifications</string>
-    <string name="username">UserName</string>
+    <string name="username">username</string>
     <string name="_0">0</string>
     <string name="posts">Posts</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>
     <string name="edit_profile">Edit profile</string>
     <string name="full_name">Full Name</string>
-    <string name="bio">bio</string>
-    <string name="images_save_button">images save button</string>
+    <string name="bio">Bio</string>
+    <string name="images_save_button">images save</string>
     <string name="search">Search</string>
     <string name="options_view">options view</string>
-    <string name="images_grid_view_btn">images grid view btn</string>
+    <string name="images_grid_view_btn">images grid</string>
+    <string name="images_grid_view_button">Images Grid</string>
 </resources>
