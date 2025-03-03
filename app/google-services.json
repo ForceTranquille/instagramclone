@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990605077915",
+    "project_id": "cloneinstagram-edf0e",
+    "storage_bucket": "cloneinstagram-edf0e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990605077915:android:4760a4d54eec453ac3853e",
+        "android_client_info": {
+          "package_name": "com.audy.highgrams"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUJBnucmFeB8txzS8RUz-yTJ3_oty4AF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

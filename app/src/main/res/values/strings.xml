@@ -23,4 +23,16 @@
     <string name="options_view">options view</string>
     <string name="images_grid_view_btn">images grid</string>
     <string name="images_grid_view_button">Images Grid</string>
+    <string name="close_profile">close_profile</string>
+    <string name="change_image">change image</string>
+    <string name="save_profile">save_profile</string>
+    <string name="logout">logout</string>
+    <string name="delete_account">delete account</string>
+    <string name="logo">logo</string>
+    <string name="fullName">fullName</string>
+    <string name="userName">userName</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="register">register</string>
+    <string name="already_have_an_account_sign_in">already have an account sign in</string>
 </resources>

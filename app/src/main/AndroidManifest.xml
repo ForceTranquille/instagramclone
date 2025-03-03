@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HighGrams">
         <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddPostActivity"
             android:exported="false" />
         <activity
